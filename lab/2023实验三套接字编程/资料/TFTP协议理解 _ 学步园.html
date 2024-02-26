@@ -1,0 +1,751 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0038)https://www.xuebuyuan.com/3180192.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="360_ssp_verify" content="bf39f4729724c5ab83a1d7903cf76b42">
+<title>TFTP协议理解 | 学步园</title> 
+<meta name="description" content="TFTP协议">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="./TFTP协议理解 _ 学步园_files/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="./TFTP协议理解 _ 学步园_files/css.css">
+<link rel="stylesheet" href="./TFTP协议理解 _ 学步园_files/highlight.css">
+<link rel="stylesheet" href="./TFTP协议理解 _ 学步园_files/img.css">
+<link rel="pingback" href="https://www.xuebuyuan.com/xmlrpc.php">
+<link rel="shortcut icon" href="https://www.xuebuyuan.com/wp-content/themes/HotNewspro/images/favicon.ico">
+<script type="text/javascript" async="" src="./TFTP协议理解 _ 学步园_files/auto_dup"></script><script src="./TFTP协议理解 _ 学步园_files/push.js"></script><script src="./TFTP协议理解 _ 学步园_files/hm.js"></script><script type="text/javascript" async="" src="./TFTP协议理解 _ 学步园_files/icrm"></script><script type="text/javascript" async="" src="./TFTP协议理解 _ 学步园_files/icrm(1)"></script><script src="./TFTP协议理解 _ 学步园_files/osd.js"></script><script src="./TFTP协议理解 _ 学步园_files/f.txt"></script><script src="./TFTP协议理解 _ 学步园_files/f(1).txt" id="google_shimpl"></script><script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/jquery.min.js"></script>
+<link rel="alternate" type="application/rss+xml" title="学步园 » Feed" href="https://www.xuebuyuan.com/feed">
+<link rel="alternate" type="application/rss+xml" title="学步园 » 评论Feed" href="https://www.xuebuyuan.com/comments/feed">
+<link rel="stylesheet" id="wp-syntax-css-css" href="./TFTP协议理解 _ 学步园_files/wp-syntax.css" type="text/css" media="all">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.xuebuyuan.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xuebuyuan.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Android锁屏状态下弹出activity，如新版qq的锁屏消息提示" href="https://www.xuebuyuan.com/3180191.html">
+<link rel="next" title="Http协议基础" href="https://www.xuebuyuan.com/3180193.html">
+<meta name="generator" content="WordPress 3.8.31">
+<link rel="canonical" href="https://www.xuebuyuan.com/3180192.html">
+<link rel="shortlink" href="https://www.xuebuyuan.com/?p=3180192">
+<style data-context="foundation-flickity-css">/*! Flickity v2.0.2
+http://flickity.metafizzy.co
+---------------------------------------------- */.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-prev-next-button{position:absolute;top:50%;width:44px;height:44px;border:none;border-radius:50%;background:#fff;background:hsla(0,0%,100%,.75);cursor:pointer;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.flickity-prev-next-button:hover{background:#fff}.flickity-prev-next-button:focus{outline:0;box-shadow:0 0 0 5px #09F}.flickity-prev-next-button:active{opacity:.6}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button:disabled{opacity:.3;cursor:auto}.flickity-prev-next-button svg{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-prev-next-button .arrow{fill:#333}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}</style><style data-context="foundation-slideout-css">.slideout-menu{position:fixed;left:0;top:0;bottom:0;right:auto;z-index:0;width:256px;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}.slideout-menu.pushit-right{left:auto;right:0}.slideout-panel{position:relative;z-index:1;will-change:transform}.slideout-open,.slideout-open .slideout-panel,.slideout-open body{overflow:hidden}.slideout-open .slideout-menu{display:block}.pushit{display:none}</style>		<link href="./TFTP协议理解 _ 学步园_files/4-blue.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+.banner img{
+	margin: 0 0 5px 0;
+}
+</style>
+
+<style>.ios7.web-app-mode.has-fixed header{ background-color: rgba(3,122,221,.88);}</style><script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/comments-ajax.js"></script>
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/reply.js"></script>
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/custom.js"></script>
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/superfish.js"></script>
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/mousewheel.js"></script>
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/fancybox.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("a[rel=example_group]").fancybox({
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none',
+			'titlePosition' 	: 'over',
+			'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+				return '<span id="fancybox-title-over">共 ' + currentArray.length + ' 张图片，当前第 ' + (currentIndex + 1) +' 张 '+ (title.length ? ' &nbsp; ' + title : '') + '</span>';
+			}
+		});
+
+		$("#various").fancybox({
+			'padding'			: 0,
+			'autoScale'			: false,
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none'
+		});
+		$("#download").fancybox({
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none'
+		});
+	});
+</script>
+<script type="text/javascript">
+$(function () {
+$('.thumbnail img,.thumbnail_t img,.box_comment img,#slideshow img,.cat_ico,.cat_name,.r_comments img,.v_content_list img').hover(
+function() {$(this).fadeTo("fast", 0.5);},
+function() {$(this).fadeTo("fast", 1);
+});
+});
+</script>
+<!-- PNG -->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="https://www.xuebuyuan.com/wp-content/themes/HotNewspro/js/pngfix.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.boxCaption,.top_box,.logo,.reply,.imgcat,.banner img,#fancybox-left-ico,#fancybox-right-ico,#fancybox-close');
+</script>
+<![endif]-->
+<!-- 图片延迟加载 -->
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/lazyload.js"></script>
+<script type="text/javascript">
+	$(function() {          
+    	$(".entry_box img,.entry_box_h img,#entry img,.entry_b img").lazyload({
+            effect:"fadeIn",
+			failurelimit : 30
+          });
+    	});
+</script>
+<!-- IE6菜单 -->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+sfHover = function() {
+	if (!document.getElementsByTagName) return false;
+	var sfEls = document.getElementById("menu").getElementsByTagName("li");
+
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}	
+	var sfEls = document.getElementById("topnav").getElementsByTagName("li");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+//--><!]]></script>
+<!-- 预加载 -->
+<script data-ad-client="ca-pub-6258758148834142" async="" src="./TFTP协议理解 _ 学步园_files/f(2).txt" data-checked-head="true"></script>
+<link rel="preload" href="./TFTP协议理解 _ 学步园_files/f(3).txt" as="script"><script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/f(3).txt"></script><style type="text/css">.HMRichPlay{width:300px;height:250px;}</style></head>
+<body class="single single-post postid-3180192 single-format-standard zh"><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./TFTP协议理解 _ 学步园_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div>
+<div id="wrapper">
+	<div id="top">
+		<div id="topnav">
+			<div class="left_top ">
+				<div class="home_h"><a href="https://www.xuebuyuan.com/" title="首  页" class="home_h"></a></div>
+				<div class="menu-%e5%af%bc%e8%88%aa-container"><ul id="menu-%e5%af%bc%e8%88%aa" class="menu sf-js-enabled sf-shadow"><li id="menu-item-1703978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703978"><a href="https://www.xuebuyuan.com/category/web%e5%89%8d%e7%ab%af">web前端</a></li>
+<li id="menu-item-1703980" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703980"><a href="https://www.xuebuyuan.com/category/%e6%95%b0%e6%8d%ae%e5%ba%93">数据库</a></li>
+<li id="menu-item-1703982" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703982"><a href="https://www.xuebuyuan.com/category/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80">编程语言</a></li>
+<li id="menu-item-1703979" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703979"><a href="https://www.xuebuyuan.com/category/%e6%90%9c%e7%b4%a2%e6%8a%80%e6%9c%af">搜索技术</a></li>
+<li id="menu-item-1810308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810308"><a href="http://www.xuebuyuan.com/aboutus">关于本站</a></li>
+</ul></div> 
+				<div class="xiaohua"><a href="https://www.xuebuyuan.com/xiaohua" title="笑话"></a></div>
+			</div>
+			<!-- end: left_top --> 
+			<div id="searchbar">
+								<form action="http://www.xuebuyuan.com/search" id="cse-search-box">
+	<div>
+	<input type="hidden" name="cx" value="007504628711321185124:w-wufhldrhc">
+	<input type="hidden" name="cof" value="FORID:10">
+	<input type="text" onclick="this.value=&#39;&#39;;" name="q" id="q" class="swap_value">
+	<input type="image" src="./TFTP协议理解 _ 学步园_files/go.gif" id="go" alt="Search" title="搜索">
+	</div>
+</form>							</div>
+			<!-- end: searchbar -->
+		</div>
+		<!-- end: topnav -->
+	</div>
+	<!-- end: top -->
+	<div id="header" name="panda">
+		<div class="header_c">
+			<div class="login_t"><a id="showbtn" onclick="showid(&#39;smallLay&#39;);">登录</a>  <div id="smallLay">
+	<div id="smallLay_box">
+	<!-- if not logged -->
+	<form action="https://www.xuebuyuan.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.xuebuyuan.com%2F3180192.html" method="post" id="loginform">
+		<div class="loginblock">
+			<p class="login"><input type="text" name="log" id="log" size="" tabindex="11"></p>
+			<p class="password"><input type="password" name="pwd" id="pwd" size="" tabindex="12"></p>
+			<p class="lefted"><button value="Submit" id="submit_t" type="submit" tabindex="13">登&nbsp;录</button></p>
+		</div>
+		<input type="hidden" name="redirect_to" value="/3180192.html">
+		<input type="checkbox" name="rememberme" id="modlogn_remember" value="yes" checked="checked" alt="Remember Me">下次自动登录
+	</form>
+	<!-- end if not logged -->
+	</div>
+</div>
+</div>
+			<div class="time">
+<script type="text/javascript">
+today=new Date();
+var day; var date; var hello;
+hour=new Date().getHours()
+if(hour < 6)hello='  凌晨好! '
+else if(hour < 9)hello=' 早上好! '
+else if(hour < 12)hello=' 上午好! '
+else if(hour < 14)hello=' 中午好! '
+else if(hour < 17)hello=' 下午好! '
+else if(hour < 19)hello=' 傍晚好! '
+else if(hour < 22)hello=' 晚上好! '
+else {hello='夜深了! '}
+var webUrl = webUrl;
+document.write(' '+hello);
+</script>  上午好! 
+<span id="localtime">
+<script type="text/javascript">
+today=new Date(); var tdate,tday, x,year; var x = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五","星期六");
+var MSIE=navigator.userAgent.indexOf("MSIE");
+if(MSIE != -1)
+year =(today.getFullYear());
+else
+year = (today.getYear()+1900);
+tdate= year+ "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日" + " " + x[today.getDay()];
+document.write(tdate);
+</script>2020年12月1日 星期二
+</span>
+</div>
+			<a href="https://www.xuebuyuan.com/" title="学步园"><h1 class="logo">学步园</h1></a>		</div>
+		<div class="clear"></div>
+		<!-- end: header_c -->
+
+<!--
+<script type="text/javascript">
+var opro_id="u2275153";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"980",rsi1:"250",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"1",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"",rss2:"#000000",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</script>
+-->
+	</div>
+	<!-- end: header -->
+			<!-- header_image -->
+		<div class="banner">
+					</div>
+		<!-- end:header_image -->
+		<!-- scroll -->
+	<ul class="scroll">
+	<li class="sct">
+		<a href="https://www.xuebuyuan.com/3180192.html#">&nbsp;&nbsp;&nbsp;</a>
+		<div><a class="scroll_t">返回顶部</a></div>
+	</li>
+		<li class="scc">
+		<a href="https://www.xuebuyuan.com/3180192.html#">&nbsp;&nbsp;&nbsp;</a>
+		<div><a class="scroll_c">查看留言</a></div>
+	</li>
+		<li class="scb">
+		<a href="https://www.xuebuyuan.com/3180192.html#">&nbsp;&nbsp;&nbsp;</a>
+		<div><a class="scroll_b">转到底部</a></div>
+	</li>
+</ul><script type="text/javascript">
+    function doZoom(size) {
+        var zoom = document.all ? document.all['entry'] : document.getElementById('entry');
+        zoom.style.fontSize = size + 'px';
+    }
+</script>
+
+<!--
+    /*正文顶部小横幅*/
+-->
+
+
+<div id="content">
+		
+	 <!-- menu -->
+		<div id="map">
+			<div class="browse">现在的位置: <a title="返回首页" href="http://www.xuebuyuan.com/">首页</a> &gt; 综合 &gt; 正文</div>
+			<div id="feed"><a href="https://www.xuebuyuan.com/feed" title="RSS">RSS</a></div>
+		</div>
+		<!-- end: menu -->
+		<div class="entry_box_s">
+			<div class="context">
+				<div class="context_t" style="display: block; opacity: 0.850766;">
+					<span class="prev"></span>
+					<span class="next"></span>
+				</div>
+			</div>
+			<div class="entry_title_box">
+				<!-- 分类图标 -->
+				<div class="ico"></div>
+				<!-- end: 分类图标 -->
+				<h2 class="entry_title">TFTP协议理解</h2>
+				<div class="archive_info">
+					<span class="date">2017年10月02日</span>
+					<span class="category"> ⁄ 综合</span>
+										⁄ 共 5553字					⁄ 字号 <span class="font"><a href="javascript:doZoom(12)">小</a> <a href="javascript:doZoom(13)">中</a> <a href="javascript:doZoom(18)">大</a></span>
+					<span class="comment"> ⁄ <span>评论关闭</span></span>
+										<span class="edit"></span>
+				</div>
+			</div>
+			<!-- end: entry_title_box -->
+			<div class="entry">
+				<div id="entry">
+					<div class="ad_r">
+	<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u1788635",
+            container:  s
+        });
+    })();
+</script><div style="" id="_rwzq8ag4q8"></div>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/c.js" async="async" defer="defer"></script>
+</div>					<div id="article_content" class="article_content">
+<p>TFTP<span style="font-family:宋体">协议</span></p>
+<p>（<span style="font-family:Times New Roman">RFC1350</span><span style="font-family:宋体">）</span><a target="_blank" href="http://www.ietf.org/rfc/rfc1350.txt"><span style="color:rgb(0,0,255)">http://www.ietf.org/rfc/rfc1350.txt</span></a></p>
+<p>为什么要引入<span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">？</span></p>
+<p>在项目中<span style="font-family:Times New Roman">udp</span><span style="font-family:宋体">环境下需要进行文件传输，一种高效的文件传输。文件传输一般会想到</span><span style="font-family:Times New Roman">FTP&nbsp;</span><span style="font-family:宋体">和</span><span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">，但考虑限制条件，所以采用</span><span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">。</span></p>
+<p>TFTP<span style="font-family:宋体">是什么？</span></p>
+<p>TFTP<span style="font-family:宋体">是一种简单的文件传输协议。</span>目标是在<span style="font-family:Arial">UDP</span><span style="font-family:宋体">之上上建立一个类似于</span><span style="font-family:Arial">FTP</span><span style="font-family:宋体">的但仅支持文件上传和下载功能的传输协议，所以它不包含</span><span style="font-family:Arial">FTP</span><span style="font-family:宋体">协议中的目录操作和用户权限等内容。</span></p>
+<p>与<span style="font-family:Arial">FTP</span><span style="font-family:宋体">相似，</span><span style="font-family:Arial">TFTP</span><span style="font-family:宋体">传输过程中也有传输模式之分，模式的意思是如何解释数据包里的内容，比如是字符串还是二进制等。目前有三种模式：</span></p>
+<p>·&nbsp;l&nbsp;<span style="color:rgb(255,0,0)">netascii</span>型：一种修改的<span style="font-family:Arial">8bit&nbsp;ascii</span><span style="font-family:宋体">码</span></p>
+<p>·&nbsp;l&nbsp;<span style="color:rgb(255,0,0)">octet</span>型：即<span style="font-family:Arial">binary</span><span style="font-family:宋体">普通的二进制型</span></p>
+<p>·&nbsp;l&nbsp;<span style="color:rgb(255,0,0)">mail</span>型：过时，不再使用</p>
+<p>另外，通讯双方也可以自定义所需的传输模式</p>
+<p></p>
+<p>TFTP<span style="font-family:宋体">的通信流程</span></p>
+<p>TFTP<span style="font-family:宋体">共定义了五种类型的包格式，格式的区分由包数据前两个字节的</span><span style="font-family:Arial">Opcode</span><span style="font-family:宋体">字段区分，分别是：</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">读文件请求包：</span><span style="font-family:Arial">Read&nbsp;request</span><span style="font-family:宋体">，简写为</span><span style="font-family:Arial">RRQ</span><span style="font-family:宋体">，对应</span><span style="font-family:Arial">Opcode</span><span style="font-family:宋体">字段值为</span><span style="font-family:Arial">1</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">写文件请求包：</span><span style="font-family:Arial">Write&nbsp;requst</span><span style="font-family:宋体">，简写为</span><span style="font-family:Arial">WRQ</span><span style="font-family:宋体">，对应</span><span style="font-family:Arial">Opcode</span><span style="font-family:宋体">字段值为</span><span style="font-family:Arial">2</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">文件数据包：</span><span style="font-family:Arial">Data</span><span style="font-family:宋体">，简写为</span><span style="font-family:Arial">DATA</span><span style="font-family:宋体">，对应</span><span style="font-family:Arial">Opcode</span><span style="font-family:宋体">字段值为</span><span style="font-family:Arial">3</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">回应包：</span><span style="font-family:Arial">Acknowledgement</span><span style="font-family:宋体">，简写为</span><span style="font-family:Arial">ACK</span><span style="font-family:宋体">，对应</span><span style="font-family:Arial">Opcode</span><span style="font-family:宋体">字段值为</span><span style="font-family:Arial">4</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">错误信息包：</span><span style="font-family:Arial">Error</span><span style="font-family:宋体">，简写为</span><span style="font-family:Arial">ERROR</span><span style="font-family:宋体">，对应</span><span style="font-family:Arial">Opcode</span><span style="font-family:宋体">字段值为</span><span style="font-family:Arial">5</span></p>
+<p>1、由客户端发起读文件<span style="font-family:Arial">/</span><span style="font-family:宋体">写文件的请求，同时可以进行请求连接</span></p>
+<p>2、服务器监听到请求，打开连接，并向客户端发送文件，以每个<span style="color:rgb(255,0,0)">定长</span>为<span style="font-family:Arial">512</span><span style="font-family:宋体">字节的块进行发送。每个数据包包含一个数据块，在发送下一个包的时候必须被客户端确认回应一个回应包。</span></p>
+<p>3、当发现某个数据包<span style="color:rgb(255,0,0)">小于<span style="font-family:Arial">512</span><span style="font-family:宋体">个字节</span></span>，说明传输<span style="color:rgb(255,0,0)">终止</span>。</p>
+<p>4、如果出现网络丢包，收件方（客户端）会超时，并且重传最后的接收包（可以是数据包或者回应包），因此这将可以让发送者重新发送丢失包。当之前的包已经接受成功之后，发送者只需要保持一个重传包。注意&nbsp;发送者&nbsp;要做的事情：发送数据，接受&nbsp;回应包；接受者要做的：发送回应包，接受数据。如下图所示<span style="font-family:Arial">:</span></p>
+<p><span style="color:rgb(255,0,0)">读请求</span>和<span style="color:rgb(255,0,0)">写请求</span>的回应是不一样的下图是读请求</p>
+<p></p>
+<p class="p0" style="margin-bottom:0pt; margin-top:0pt"><img alt="" original="http://img.blog.csdn.net/20141018231957031?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemxqX2ZseQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></p>
+<p>
+</p>
+<p>有许多的错误会造成连接中断<span style="font-family:Times New Roman">.</span></p>
+<p>1、发送错误的包，这个包没有回应，也没有重发，（例如，<span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">服务器或者客户端会因为收到错误的信息终止）这样导致对方接受不到。所以引入了超时机制。通常错误由</span><span style="font-family:Times New Roman">3</span><span style="font-family:宋体">种情况导致</span><span style="font-family:Times New Roman">:</span></p>
+<p>&nbsp;(1)<span style="font-family:宋体">、不能满足请求的内容</span><span style="font-family:Times New Roman">(</span><span style="font-family:宋体">例如：文件找不到，不允许接入，或者用户不存在</span><span style="font-family:Times New Roman">)</span><br>
+（<span style="font-family:Times New Roman">2</span><span style="font-family:宋体">）、由于网络延迟或者重置导致正在接收的包无法解析（例如包的格式不正确）</span><br>
+&nbsp;(3)<span style="font-family:宋体">、必须访问资源丢失（例如磁盘满了，或者传输过程中拒绝访问）</span></p>
+<p>TFTP<span style="font-family:宋体">意识到仅有一个错误条件是不会导致中断的，那就是接收包的源端口不正确。在这种情况下会向原始的服务器发一个错误包。</span></p>
+<p>为了简单的实现，<span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">协议非常的有限。例如：固定大小的块可以使得分配空间更直接，在锁定等待回应包可以方便控制流并且不需要重排接到的数据包</span></p>
+<p></p>
+<p></p>
+<p>TFTP<span style="font-family:宋体">的具体包结构</span></p>
+<p>&nbsp;因为<span style="font-family:Times New Roman">TFTp</span><span style="font-family:宋体">是设计在</span><span style="font-family:Times New Roman">udp</span><span style="font-family:宋体">上层的协议，并且是报文是基于网络协议，属于数据包将拥有一个</span><span style="color:rgb(255,0,0)">网络包头</span>，<span style="color:rgb(255,0,0)">报文头</span>，和<span style="color:rgb(255,0,0)">TFTP<span style="font-family:宋体">头</span></span></p>
+<p>另外数据包有可能还有其他的头（例如<span style="font-family:Times New Roman">LNI,ARPA</span><span style="font-family:宋体">头等等）来允许他们通过本地的传输媒体。下面的表表示了一个包包含的内容</span><span style="font-family:Times New Roman">:</span>&nbsp;local&nbsp;medium&nbsp;header,&nbsp;if&nbsp;used,&nbsp;Internet&nbsp;header,</p>
+<p>&nbsp;&nbsp;&nbsp;Datagram&nbsp;header,&nbsp;TFTP&nbsp;header,&nbsp;followed&nbsp;by&nbsp;the&nbsp;remainder&nbsp;of&nbsp;the&nbsp;TFTP</p>
+<p>&nbsp;&nbsp;&nbsp;Packet.</p>
+<p>TFTP<span style="font-family:宋体">不需要制定任何的网络头的值。另外报文头数据源和目标端口字段用于</span><span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">，长度字段但应</span><span style="font-family:Times New Roman">tftp</span><span style="font-family:宋体">包的大小。用于</span><span style="font-family:Times New Roman">TFTP</span><span style="font-family:宋体">的传输</span><span style="font-family:Times New Roman">id(tid)</span><span style="font-family:宋体">会传到报文层当作端口使用，因此必须是</span><span style="font-family:Times New Roman">0~65535</span><span style="font-family:宋体">（</span><span style="font-family:Times New Roman">16</span><span style="font-family:宋体">位，</span><span style="font-family:Times New Roman">2</span><span style="font-family:宋体">个字节）</span></p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Local&nbsp;Medium&nbsp;&nbsp;|&nbsp;&nbsp;Internet&nbsp;&nbsp;|&nbsp;&nbsp;Datagram&nbsp;&nbsp;|&nbsp;&nbsp;TFTP&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------------------------</p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure&nbsp;3-1:&nbsp;Order&nbsp;of&nbsp;Headers</p>
+<p>TFTP<span style="font-family:宋体">支持</span><span style="font-family:Times New Roman">5</span><span style="font-family:宋体">中操作类型的数据</span><span style="font-family:Times New Roman">:</span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opcode&nbsp;&nbsp;operation</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read&nbsp;request&nbsp;(RRQ)&nbsp;读文件请求</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write&nbsp;request&nbsp;(WRQ)&nbsp;写文件请求</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data&nbsp;(DATA)&nbsp;数据</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acknowledgment&nbsp;(ACK)&nbsp;确认包</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Error&nbsp;(ERROR)&nbsp;错误</p>
+<p>TFTP<span style="font-family:宋体">的</span><span style="color:rgb(255,0,0)">请求包</span>。如下图</p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;&nbsp;&nbsp;1&nbsp;byte</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Opcode&nbsp;|&nbsp;&nbsp;Filename&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Mode&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:rgb(255,0,0)">Figure&nbsp;5-1:&nbsp;RRQ/WRQ&nbsp;packet</span></p>
+<p>上述协议中</p>
+<p>Opcode&nbsp;<span style="font-family:宋体">操作码</span></p>
+<p>Filename:netascii的文件字节序号，0<span style="font-family:宋体">表示终止</span></p>
+<p>Mode:<span style="font-family:宋体">类型主要&nbsp;可以是&nbsp;</span>"netascii",&nbsp;"octet",&nbsp;or&nbsp;"mail"&nbsp;(这几个单词的字母不区分大小写)</p>
+<p></p>
+<p><span style="color:rgb(255,0,0)">数据包格式<span style="font-family:Times New Roman">:</span></span></p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;bytes</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Opcode&nbsp;|&nbsp;&nbsp;&nbsp;Block&nbsp;#&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------</p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure&nbsp;5-2:&nbsp;DATA&nbsp;packet</p>
+<p><span style="color:rgb(255,0,0)">Block#&nbsp;</span>从<span style="font-family:Times New Roman">1</span><span style="font-family:宋体">开始，每一个新包自加。</span><span style="color:rgb(51,51,51)">此限制，允许程序使用一个单一的数字来区分的新数据包之间的重复</span><span style="color:rgb(51,51,51)">。每一个块的定长为</span><span style="color:rgb(51,51,51)">512&nbsp;<span style="font-family:宋体">（</span><span style="font-family:Arial">2^9</span><span style="font-family:宋体">）</span><span style="font-family:Arial">,</span><span style="font-family:宋体">如果出现某一块长度部位</span><span style="font-family:Arial">512</span><span style="font-family:宋体">，那就表示数据传输完成，终止传输。</span></span></p>
+<p><span style="color:rgb(51,51,51)">除了<span style="font-family:Arial">ACK</span><span style="font-family:宋体">和用于中断的包外，其它的包均得到确认。发出新的数据包等于确认上次的包。</span><span style="font-family:Arial">WRQ</span><span style="font-family:宋体">和</span><span style="font-family:Arial">DATA</span><span style="font-family:宋体">包由</span><span style="font-family:Arial">ACK</span><span style="font-family:宋体">或</span><span style="font-family:Arial">ERROR</span><span style="font-family:宋体">数据包确认，而</span><span style="font-family:Arial">RRQ</span><span style="font-family:宋体">数据包由</span><span style="font-family:Arial">DATA</span><span style="font-family:宋体">或</span><span style="font-family:Arial">ERROR</span><span style="font-family:宋体">数据包确认。</span></span></p>
+<p><span style="color:rgb(51,51,51)">ACK<span style="font-family:宋体">包</span></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Opcode&nbsp;|&nbsp;&nbsp;&nbsp;Block&nbsp;#&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------</p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure&nbsp;5-3:&nbsp;ACK&nbsp;packet</p>
+<p>错误包结构</p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;byte</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Opcode&nbsp;|&nbsp;&nbsp;ErrorCode&nbsp;|&nbsp;&nbsp;&nbsp;ErrMsg&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----------------------------------------</p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure&nbsp;5-4:&nbsp;ERROR&nbsp;packet</p>
+<p></p>
+<p>附录:</p>
+<p>Order&nbsp;of&nbsp;Headers(<span style="font-family:宋体">头顺序</span><span style="font-family:Times New Roman">)</span></p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Local&nbsp;Medium&nbsp;&nbsp;|&nbsp;&nbsp;Internet&nbsp;&nbsp;|&nbsp;&nbsp;Datagram&nbsp;&nbsp;|&nbsp;&nbsp;TFTP&nbsp;Opcode&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------------------------</p>
+<p></p>
+<p>TFTP&nbsp;Formats(TFTP<span style="font-family:宋体">格式</span><span style="font-family:Times New Roman">)</span></p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;Type&nbsp;&nbsp;&nbsp;Op&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format&nbsp;without&nbsp;header</p>
+<p></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;&nbsp;&nbsp;1&nbsp;byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;&nbsp;&nbsp;1&nbsp;byte</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-----------------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;RRQ/&nbsp;&nbsp;|&nbsp;01/02&nbsp;|&nbsp;&nbsp;Filename&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Mode&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;WRQ&nbsp;&nbsp;&nbsp;&nbsp;-----------------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;bytes</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;DATA&nbsp;&nbsp;|&nbsp;03&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Block&nbsp;#&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Data&nbsp;&nbsp;&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-------------------</p>
+<p>&nbsp;&nbsp;&nbsp;ACK&nbsp;&nbsp;&nbsp;|&nbsp;04&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Block&nbsp;#&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;2&nbsp;bytes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;byte</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------</p>
+<p>&nbsp;&nbsp;&nbsp;ERROR&nbsp;|&nbsp;05&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;ErrorCode&nbsp;|&nbsp;&nbsp;&nbsp;ErrMsg&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;|</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------</p>
+<p><span style="color:rgb(255,0,0)">初始化一个读文件的连接</span></p>
+<p>初始化连接协议</p>
+<p>一旦发送请求<span style="font-family:Times New Roman">(WRQ&nbsp;</span><span style="font-family:宋体">写文件请求或者&nbsp;</span><span style="font-family:Times New Roman">RRQ</span><span style="font-family:宋体">读文件请求</span><span style="font-family:Times New Roman">)</span><span style="font-family:宋体">，传输就已经建立，并且收到写的回应包，或读取第一个数据，的肯定答复。一般说回应包会包含已经回应的数据包的块序号。每一个数据包都和他的块序号关联，块序号从</span><span style="font-family:Times New Roman">1</span><span style="font-family:宋体">开始，顺序增加。在特殊的情况下块序号是</span><span style="font-family:Times New Roman">0</span><span style="font-family:宋体">，即当写请求的相应包是一个确认包的时候（通常，只要确认包是确认的数据包，确认包会包含被确认数据的块序号）。如果回应是一个错误包，请求会被拒绝。</span></p>
+<p>为了建立连接，连接的每一段都会为自己在传输期间选则传输<span style="font-family:Times New Roman">id</span><span style="font-family:宋体">（</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">）。连接的</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">是随机生成的，所以在一个过程中同时出现两个相同的</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">的概率是非常少的。每一个包都包含两个</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">，一个是源</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">，一个是目标</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">。这两个</span><span style="font-family:Times New Roman">tid</span><span style="font-family:宋体">是用来支持</span><span style="font-family:Times New Roman">udp</span><span style="font-family:宋体">（或者其他报文协议）作为源端口和目标端口。在响应请求的，正常情况操作下，服务器使用自己的</span><span style="font-family:Times New Roman">TID</span><span style="font-family:宋体">作为源</span><span style="font-family:Times New Roman">TID</span><span style="font-family:宋体">，而选择上一条请求消息的</span><span style="font-family:Times New Roman">Tid</span><span style="font-family:宋体">作为目标</span><span style="font-family:Times New Roman">TID</span><span style="font-family:宋体">。这两个</span><span style="font-family:Times New Roman">TId</span><span style="font-family:宋体">作为接下来的传输。</span></p>
+<p></p>
+<p>例如：</p>
+<p>1<span style="font-family:宋体">．</span><a target="_blank" href="http://baike.baidu.com/view/23880.htm"><span style="color:rgb(0,0,0)">主机</span></a>A<span style="font-family:宋体">向主机</span><span style="font-family:Times New Roman">B</span><span style="font-family:宋体">发出</span><span style="font-family:Times New Roman">WRQ</span><span style="font-family:宋体">，其中端口为</span><span style="font-family:Times New Roman">69</span></p>
+<p>2<span style="font-family:宋体">．&nbsp;</span><span style="font-family:Times New Roman">B</span><span style="font-family:宋体">机向</span><span style="font-family:Times New Roman">A</span><span style="font-family:宋体">机发出</span><span style="font-family:Times New Roman">ACK</span><span style="font-family:宋体">，块号为</span><span style="font-family:Times New Roman">0</span><span style="font-family:宋体">，包括</span><span style="font-family:Times New Roman">B</span><span style="font-family:宋体">和</span><span style="font-family:Times New Roman">A</span><span style="font-family:宋体">的</span><span style="font-family:Times New Roman">TID</span></p>
+<p>错误码</p>
+<p>&nbsp;&nbsp;&nbsp;值&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表示意思</p>
+<p>&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未定义Not&nbsp;defined,&nbsp;see&nbsp;error&nbsp;message&nbsp;(if&nbsp;any).<br>
+&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件找不到File&nbsp;not&nbsp;found.<br>
+&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拒绝访问Access&nbsp;violation.<br>
+&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;磁盘满了或者超出了可分配空间Disk&nbsp;full&nbsp;or&nbsp;allocation&nbsp;exceeded.<br>
+&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;非法TFTP<span style="font-family:宋体">操作</span>Illegal&nbsp;TFTP&nbsp;operation.<br>
+&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传输ID<span style="font-family:宋体">未知</span>Unknown&nbsp;transfer&nbsp;ID.<br>
+&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文件不存在File&nbsp;already&nbsp;exists.<br>
+&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;没有该用户No&nbsp;such&nbsp;user.</p>
+<p></p>
+<p>TFTP<span style="font-family:宋体">总结</span></p>
+<p>整体上来说，<span style="font-family:Arial">TFTP</span><span style="font-family:宋体">的一个重要特点就是简单及易于实现，这也是设计</span><span style="font-family:Arial">TFTP</span><span style="font-family:宋体">协议的一个初衷。</span></p>
+<p>优点：</p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">每个数据包大小固定，这样在内存分配处理的时候比较直接</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">实现简单</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">每个数据包都有确认机制，可以实现一定程度的可靠性</span></p>
+<p>缺点：</p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">传输效率不高</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">滑动窗口机制太简单，并且该窗口仅有一个包的大小</span></p>
+<p>·&nbsp;l&nbsp;<span style="font-family:宋体">超时处理机制并不完善，</span><span style="font-family:Arial">RFC1350</span><span style="font-family:宋体">并没有给出详细的处理机制说明</span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>
+
+<!-- 正文末位置 -->
+
+
+
+
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="./TFTP协议理解 _ 学步园_files/cno.js" async="async" defer="defer"></script>
+
+														</div>
+							</div>
+			<div class="back_b">
+				<a href="javascript:void(0);" onclick="history.back();">返回</a>
+			</div>
+			<div class="clear"></div>
+			<!-- end: entry -->
+			<i class="lt"></i>
+			<i class="rt"></i>
+		</div>
+		<div class="entry_sb">
+			<i class="lb"></i>
+			<i class="rb"></i>
+		</div>
+                <div class="ad_h">
+		<div class="ad_h_c">
+<table>
+<tbody><tr>
+<td>
+<script type="text/javascript">
+    /*500宽矩形*/
+    var cpro_id = "u1507413";
+</script>
+<script src="./TFTP协议理解 _ 学步园_files/cno.js" type="text/javascript"></script>
+
+</td>
+<td>
+
+<script type="text/javascript">
+    /*右侧小矩形*/
+    var cpro_id = "u1507403";
+</script>
+<div id="BAIDU_SSP__wrapper_u1507403_0"></div><script src="./TFTP协议理解 _ 学步园_files/cno.js" type="text/javascript"></script>
+
+
+</td>
+</tr>
+</tbody></table>
+			<div class="clear"></div>
+		</div>
+	<i class="lt"></i>
+	<i class="rt"></i>
+</div>
+<div class="entry_box_b">
+	<i class="lb"></i>
+	<i class="rb"></i>
+</div>
+		<!-- ad -->
+						
+		<div class="context_b">
+			【上篇】<a href="https://www.xuebuyuan.com/3180191.html" rel="prev">Android锁屏状态下弹出activity，如新版qq的锁屏消息提示</a><br>【下篇】<a href="https://www.xuebuyuan.com/3180193.html" rel="next">Http协议基础</a>			<i class="lt"></i>
+			<i class="rt"></i>
+			<i class="lb"></i>
+			<i class="rb"></i>
+		</div>
+		<!-- relatedposts -->
+								<!-- end: relatedposts -->
+		<!-- entrymeta -->
+
+		<div class="entrymeta">
+			<div class="authorbio">
+				<div class="author_pic">
+<!--
+					<img alt='' src='https://secure.gravatar.com/avatar/8be0fa6e0cc40e1f0726557a0a8f4f76?s=48&amp;d=wavatar&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />-->
+				</div>
+				<div class="clear"></div>
+				<div class="author_text">
+					<h4>作者: <span><a href="https://www.xuebuyuan.com/author/calendula" title="由calendula发布" rel="author">calendula</a></span></h4>
+				</div>
+			</div>
+			<span class="spostinfo">
+				<ul>
+					<li>该日志由 calendula 于3年前发表在综合分类下，最后更新于 2017年10月02日.</li>
+					<li>转载请注明: <a href="https://www.xuebuyuan.com/3180192.html" rel="bookmark" title="本文固定链接 https://www.xuebuyuan.com/3180192.html">TFTP协议理解 | 学步园</a><a href="https://www.xuebuyuan.com/3180192.html#" onclick="copy_code(&#39;https://www.xuebuyuan.com/3180192.html&#39;); return false;"> +复制链接</a></li>
+					<li class="content_tag"></li>
+				</ul>
+			</span>
+			<i class="lt"></i>
+			<i class="rt"></i>
+			<div class="clear"></div>
+		</div>
+		<div class="entry_sb">
+			<i class="lb"></i>
+			<i class="rb"></i>
+		</div>
+		<!-- end: entrymeta -->
+	<div class="ct"></div>
+	<!-- You can start editing here. -->
+			<!-- If comments are closed. -->
+		<p class="nocomments">抱歉!评论已关闭.</p>
+							</div>
+<!-- end: content -->
+<div id="sidebar">
+	
+						
+		<div class="widget">
+		<h3>书签</h3><div class="box">
+	<ul class="xoxo blogroll">
+<li><a href="https://www.17lhy.com/">176互娱</a></li>
+<li><a href="http://55sns.cn/">55小说网</a></li>
+<li><a href="http://www.aaapeixun.com/">aaa培训机构</a></li>
+<li><a href="https://wanbianip.com/">ip地址修改器</a></li>
+<li><a href="http://www.ruicongzs.com/">中职招生网</a></li>
+<li><a href="https://www.6z5.com/">乐折网</a></li>
+<li><a href="http://www.qianyuwang.com/">仟渔网</a></li>
+<li><a href="https://www.aiwanbao.com/" target="_blank">传奇私服</a></li>
+<li><a href="https://www.gongsiqiming.com/">公司起名</a></li>
+<li><a href="http://www.msbaidu.com/" target="_blank">别墅装修</a></li>
+<li><a href="http://www.knowsky.com/">动态网站制作指南</a></li>
+<li><a href="https://www.tzcy37.com/gmnc/">古茗奶茶加盟费多少</a></li>
+<li><a href="http://www.zgmcxw.com/">名城</a></li>
+<li><a href="http://www.jgxarqb.xyz/">多少问答网</a></li>
+<li><a href="http://www.lds01.org/">头条新闻</a></li>
+<li><a href="https://m.fixdown.com/" target="_blank">安卓游戏</a></li>
+<li><a href="https://m.fixdown.com/">安卓软件</a></li>
+<li><a href="http://gz.fang.com/">广州房产网</a></li>
+<li><a href="https://yyk.99.com.cn/baiyun/101764/">广州新世纪白癜风</a></li>
+<li><a href="http://news.8fkd.com/news/p211440.aspx">庆余年全集</a></li>
+<li><a href="http://www.wenjutv.com/article/2019/1220/3543341">庆余年在线观看</a></li>
+<li><a href="https://www.zhaosw.com/">找商网</a></li>
+<li><a href="http://www.365zhaosheng.com/">招生</a></li>
+<li><a href="http://www.tansuonet.com/">探索网</a></li>
+<li><a href="http://www.912688.com/">搜好货</a></li>
+<li><a href="http://robot.jiameng.com/">机器人加盟</a></li>
+<li><a href="http://www.ok168198.com/">柚子视频</a></li>
+<li><a href="http://www.zhejiangfood.net/">浙江食品网</a></li>
+<li><a href="https://www.hnchemeng.com/hot.html" target="_blank">热点新闻</a></li>
+<li><a href="https://bz.yi958.com/" target="_blank">生辰八字算命</a></li>
+<li><a href="http://www.baiyunpiaopiao.com/">白云飘飘网</a></li>
+<li><a href="https://www.95.cn/" target="_blank">美女直播</a></li>
+<li><a href="https://flights.ch.com/flight-date">航班查询时刻表</a></li>
+<li><a href="http://www.daixiaomi.com/">贷小秘贷款平台</a></li>
+<li><a href="https://www.repink.net/">软件下载</a></li>
+<li><a href="https://www.iqushi.com/">软件下载</a></li>
+<li><a href="http://www.zmnxy.com/" target="_blank">软件测试培训</a></li>
+<li><a href="http://asd/">阿斯达</a></li>
+<li><a href="http://qd.fang.com/">青岛房产网</a></li>
+
+	</ul>
+</div>
+    	<div class="box-bottom">
+			<i class="lb"></i>
+			<i class="rb"></i>
+		</div>
+<div class="newarticles">
+	<h3>最新文章</h3>	
+	<div class="box_r">
+		<ul>
+			<li>
+								<a href="https://www.xuebuyuan.com/3297141.html">plist的表达</a>
+								<a href="https://www.xuebuyuan.com/3297140.html">text indent参数示例</a>
+								<a href="https://www.xuebuyuan.com/3297139.html">笛卡尔积定义运算</a>
+								<a href="https://www.xuebuyuan.com/3297138.html">onclick时间怎么办</a>
+								<a href="https://www.xuebuyuan.com/3297137.html">dispatch代码怎么写</a>
+								<a href="https://www.xuebuyuan.com/3297136.html">python发展历程</a>
+								<a href="https://www.xuebuyuan.com/3297135.html">bug代码如何找</a>
+								<a href="https://www.xuebuyuan.com/3297134.html">plugin支持软件机制</a>
+								<a href="https://www.xuebuyuan.com/3297133.html">components结构介绍</a>
+							</li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="box-bottom">
+		<i class="lb"></i>
+		<i class="rb"></i>
+	</div>
+</div>	</div>
+		<div class="widget">
+		<h3>本站推荐</h3>
+<div class="box">
+	<div class="scat_img"></div>
+	<div id="scat">
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/3275015.html" rel="bookmark" title="详细阅读为什么PHP的吉祥物是一头大象">为什么PHP的吉祥物是一头大象</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2201282.html" rel="bookmark" title="详细阅读作业的提交和监控（二）">作业的提交和监控（二）</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2201280.html" rel="bookmark" title="详细阅读作业的提交和监控（一）">作业的提交和监控（一）</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198273.html" rel="bookmark" title="详细阅读Boost – Function 分析">Boost – Function 分析</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198272.html" rel="bookmark" title="详细阅读奇技淫巧 – C/C++ 宏自身迭代">奇技淫巧 – C/C++ 宏自身</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198221.html" rel="bookmark" title="详细阅读模板的 SFINAE 原则">模板的 SFINAE 原则</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198220.html" rel="bookmark" title="详细阅读Octopress 和 Git 的结合">Octopress 和 Git 的结合</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198208.html" rel="bookmark" title="详细阅读Electric-fence 介绍">Electric-fence 介绍</a></li>
+		</ul>
+			
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/3275015.html" rel="bookmark" title="详细阅读为什么PHP的吉祥物是一头大象">为什么PHP的吉祥物是一头大象</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2201282.html" rel="bookmark" title="详细阅读作业的提交和监控（二）">作业的提交和监控（二）</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2201280.html" rel="bookmark" title="详细阅读作业的提交和监控（一）">作业的提交和监控（一）</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198273.html" rel="bookmark" title="详细阅读Boost – Function 分析">Boost – Function 分析</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198272.html" rel="bookmark" title="详细阅读奇技淫巧 – C/C++ 宏自身迭代">奇技淫巧 – C/C++ 宏自身</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198221.html" rel="bookmark" title="详细阅读模板的 SFINAE 原则">模板的 SFINAE 原则</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198220.html" rel="bookmark" title="详细阅读Octopress 和 Git 的结合">Octopress 和 Git 的结合</a></li>
+		</ul>
+				<ul>
+			<li><a href="https://www.xuebuyuan.com/2198208.html" rel="bookmark" title="详细阅读Electric-fence 介绍">Electric-fence 介绍</a></li>
+		</ul>
+			</div>
+	<div class="clear"></div>
+</div>
+<div class="box-bottom">
+	<i class="lb"></i>
+	<i class="rb"></i>
+</div>
+<script type="text/javascript">
+var c,_=Function;
+with(o=document.getElementById("scat")){ innerHTML+=innerHTML; onmouseover=_("c=1"); onmouseout=_("c=0");}
+(F=_("if(#%26||!c)#++,#%=o.scrollHeight>>1;setTimeout(F,#%26?10:3500);".replace(/#/g,"o.scrollTop")))();
+</script>	</div>
+
+	
+	
+				<div class="widget">
+			</div>
+	<div class="widget">
+				<!--<a target="_blank" href="https://www.shuoshuo.art/?fromurl=xby2" class="ss_gateway ss_gateway_2">&nbsp;</a>-->
+	</div>
+		<div class="widget">
+					</div>
+	
+				<div class="clear"></div>
+
+			</div>
+<div class="clear"></div>
+<div class="footer_top">
+	<div id="menu">
+		<div class="menu-%e5%af%bc%e8%88%aa-container"><ul id="menu-%e5%af%bc%e8%88%aa-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703978"><a href="https://www.xuebuyuan.com/category/web%e5%89%8d%e7%ab%af">web前端</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703980"><a href="https://www.xuebuyuan.com/category/%e6%95%b0%e6%8d%ae%e5%ba%93">数据库</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703982"><a href="https://www.xuebuyuan.com/category/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80">编程语言</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1703979"><a href="https://www.xuebuyuan.com/category/%e6%90%9c%e7%b4%a2%e6%8a%80%e6%9c%af">搜索技术</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1810308"><a href="http://www.xuebuyuan.com/aboutus">关于本站</a></li>
+</ul></div>	</div>
+	<h2 class="blogtitle">
+	<a href="https://www.xuebuyuan.com/" title="学步园">返回首页</a></h2>
+		<big class="lt"></big>
+	<big class="rt"></big>
+</div>
+<!-- 页脚 -->
+<div class="footer_bottom_a" style="height:50px;">
+	Copyright © 2013-2018 学步园&nbsp;&nbsp;保留所有权利.<br>
+	软文销售 QQ客服：2517270004 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2517270004&amp;site=qq&amp;menu=yes"><img border="0" src="./TFTP协议理解 _ 学步园_files/pa" alt="点击这里给我发消息" title="点击这里给我发消息"></a>（其他合作也可洽谈）
+		<big class="lb"></big>
+	<big class="rb"></big>
+</div>
+<!-- 首页页脚 -->
+ <div class="clear"></div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c57074b92a236b345c239a8a9c6f471b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script src="./TFTP协议理解 _ 学步园_files/e4054b4cb0ff489d499d25f095aa94c1.js"></script><script src="./TFTP协议理解 _ 学步园_files/883.js"></script><script src="./TFTP协议理解 _ 学步园_files/71ab.js"></script><div style="display:none"><script src="./TFTP协议理解 _ 学步园_files/z_stat.php" language="JavaScript"></script><script src="./TFTP协议理解 _ 学步园_files/core.php" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1279093827" target="_blank" title="站长统计">站长统计</a></div>
+<script src="./TFTP协议理解 _ 学步园_files/rich-tf.js" id="richid" data="s=2403"></script>
+<div style="display:none"><script src="./TFTP协议理解 _ 学步园_files/z_stat(1).php" language="JavaScript"></script><script src="./TFTP协议理解 _ 学步园_files/core(1).php" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1279305463" target="_blank" title="站长统计">站长统计</a></div>
+
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./TFTP协议理解 _ 学步园_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!0" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_3688396709656" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./TFTP协议理解 _ 学步园_files/saved_resource.html"></iframe><script charset="utf-8" src="./TFTP协议理解 _ 学步园_files/m_rich.js" id="richdata" data="s=2403"></script>
+
+
+<!-- Powered by WPtouch: 4.3.18 -->
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="HMRichBox" style="width: 300px; height: 250px; position: fixed; bottom: 0px; display: block; opacity: 1; right: 0px; z-index: 2147483647;"><a id="HMrichA" href="http://jg.ksjsa.com/stf/visitor.html?id=146&amp;s=3426&amp;c=276152" target="_blank" style="display: inline;position:static"><img src="data:image/gif;base64,R0lGODlhAgACAIAAAP///wAAACH5BAEAAAAALAAAAAACAAIAAAIChFEAOw==" style="position:absolute;width:100%;height:100%;border:0px;opacity:0;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAAFzx/vAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNpi1Oi7MZOBjoCJgc6AoIXXC9XTSDGQkHqCFmr235xFyBBSHMWIHofEagY5hFg9yGpZCCkgJgjRLcenn+JEQ4rjcPqQ0gSCTRzmMBZ6+o5iC4lNZAQTDTV9iu4gupc0VPEhKRmfBV+eokWQMg772gIgwADcMj5Lyf2sGwAAAABJRU5ErkJggg==" style="position: absolute;right:0px;bottom:0px;border:0px;width:auto;"></a><img onclick="closeaction()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAASCAIAAACiiNvMAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAByUlEQVRIicVWMUvDQBR+saGSkKDQTsVMygUEUUgXu+gPsP4Af4BF17iJQ0GcjKukWxeHrukfcMnUDIIgCTiUlnZJBzGkWCxxiFzSSy4tXfKmy3fvvu/lvce7Y5TLHuRnTBAEOcpv5KgNACwA2AP/qTMYTWbjySzpIXAFWeLOjkv1WhmD1YbV05W4G4EkHVKNCYKgZYxa3XG2H9rhXu72aXqpYhisNixiCzuzcfTkcMtyPG86Dz8FrqAg4fXtCwBEvkCjINZJMJknvI7kFSRo13v2wG9ojjedC1xBV5Es8Q3NthyPdp4muWItInnL8QzTrdfKuopunj8fr3ZliTdMl9Am/mbFGtNsIfnNdh8A6rWy8XAAAIbphsjaFs9TuCZiZYkDWmd4erQt8uy3/6t1htmMqUhqTyxPPgCE9RZ5duT+VMqbuorCPqCxZ/BmR4wtGju41wzTPb99N0xXlnhdRQJH9jyhncG+NL5IvlIqVkpFXO9mu2+Ybghm82ZEsDQ3UfKd4fTi/iM++Jrtfqs7Th2FBG8YQVKJNnYW5BUkAowBIKmEEQWJWBjS5gzOAS2I1Dj+bzx74Hv+HOimyGLG7tqW84XL5Pvc+AOCkvSbgqTkugAAAABJRU5ErkJggg==" style="position:absolute;right:0px;top:0px;border:0px;width:auto;z-index:2147483647"><object class="HMRichPlay" style="width:300px;height:250px;" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" id="hmrichadplayer"><param name="allowfullscreen" value="true"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="movie" value="//sc.cnliken.com/syjpc/sssf-msmfjsAds9-27-300-250.swf"><embed class="HMRichPlay" id="hmrichadplayer1" align="middle" ver="10.0.0" scale="exactfit" bgcolor="#FFFFFF" wmode="transparent" allowfullscreen="true" allowscriptaccess="always" src="//sc.cnliken.com/syjpc/sssf-msmfjsAds9-27-300-250.swf" name="reader" type="application/x-shockwave-flash" pluginspage="//www.macromedia.com/go/getflashplayer"></object><div id="hbidbox" style="position:absolute;right:0;top:-25px;width:100%;height:25px;background:#4F4F4F;display:block;"><img onclick="funtourlaction()" style="display:block;position:absolute;left:5px;width:auto;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAaCAYAAACzdqxAAAAAAXNSR0IArs4c6QAAA7hJREFUSA2tVV1oHFUU/u6dyczObrIhySY1G9FKWqEopYjaB32pfdEHX3ypIOiD4kOhYAVRn1xoQREKpRYUUUSwLxYRQUQRpRZBsQ9VIRa1MUmbHze7SbOT7O7s/NzruXd2drNkDNb0wp0zc8853z33fOeeYVJK9tjo4Asmky9yxh0JMNzskBDksuQK+ex3K+4l5c4eLeSP39OfKR27Y1fe5jePmcSw2PJxYnqpsspw8GK5NmPsy9ofl/ZMjO0EVIEPmAaGTSM7VasHfzb8rzljLLtT0CTqYsZmFuf71Tf/HxlNcLbIdiK14Fu0t2iBtyKZWfaDWwI31/TRErKgwEwqBHFmbpmSz3FwsB/39jsoWOZ/3iii+vzZbeCrlTVQkDAZmhq4jzP/5N4JzNBul906zl5bhhtGGCXwcdsiaSDDORyaZAsvEmgIgRtBhNlmC2U/1ME8OT4Cgwh7Y2aproGT0O5yLKj5xK4hUBCoksNCK8AKpclrA4VSwjHiTXZnbTwyMoAxqy+BgEpFMlLPrGhVEasJOGD9FMuQCbFEjqHaNn0M0+l2O/b3SpsKnLgZezKwny7AmLDiJcpheLkB76Mq5HqUmHXkgGHg1cniN6eJs38tN/NAFtlXil1Q5W4wmPfnkHttAiy31XU9ivD69OJhZbpVS4vM4bCfGe20I+FGaH26Cp18pae0ZI7oqlIYnbHqa0IfVgupwHwyA543tIMCbb65CP/zNXjvLXfAjfuyHcC0l1Rgo9hl2nu7TKTFFyj4cQP+F2saR52KDfdStJm8VGBRCTtB2E8VdFWoBUVm3+F8rKPqkGu9BOaIvEPD+V+UgQbmhTEMvnwidqCnmPYAX/VuArvdgvPSOBSZzvHbwDJxLNEVshG9pTdPF+aDhcpR5aetmJ2hqAbUtx6arPNEVnto8GNdUNkS8M5VEnVHyrhV6u4WJ0lEYGZvvvxvXUg6rn1kpBOlQojmfXjvV7A5XR3kTS+mKqGoUoY5eTfFTweg65uM4OI6wp/qMO60Qb8HiPkWxALdvq5JYqplOzFamALCC4IAjU/OYejUuwiv/gGx4aL+4TuwHzoE68ADaH75GcIffu8BSfv4m/57kZRXlM7Ym7OcBS98cP/1q1b4268Qq1VEs9MQVapZ34eo3UB47S/9ngaWrKmm9dZcuVqT8uhsw19hpVKJXzp7usSYeD7LuboVvVQnnttI6nqMZs2V4rkL1Y0LyrT9m4q9Hi8Ws60o6lmLNds/BwuF4PzUVLdnbm++M+0/B7Vpfr46S1gAAAAASUVORK5CYII="><a href="http://jg.ksjsa.com/stf/visitor.html?id=146&amp;s=3688&amp;c=999999" id="hhtvalue" target="_blank" style="display:block;text-align:center;line-height:25px;color:#fff;font-size:15px;text-decoration:none;">五星秘书,百位女神等你来解锁！</a><img onclick="funclose()" style="display:block;width:11px;height:11px;position:absolute;top:50%;margin-top:-5.5px;right:5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvwPBAwQwMhAPADrAQggJnQBYjWCAEAAMaHZ+J9YjSB9AAHEhMXJ/4nRCCIAAogJXQCHAf+xqQMIICY0RdgM+I9DngEggJiwOI+RkI0wABBATDj8x0iADwYAAcRERODgDESAAGIiJlRxGQAQQExEaMRpAEAAMREZOFgNAAggJmJCFZcBAAHERKRGrAYABBATCRox1AEEGACBfxwadBBTawAAAABJRU5ErkJggg=="></div><img src="data:image/gif;base64,R0lGODlhGQANAJECAIYAAP///////wAAACH5BAEAAAIALAAAAAAZAA0AAAJHlIOXiu0mAnATSgSyDrHNm3gOxknaWYFklFIj664QPLNopsbjZ4rmvQFNUjxRkfQhcjq8zwG3yjlJvqDQqYAef6/ZaMFAFAAAOw==" style="cursor: pointer; position: absolute; top: 0px; left: 0px; z-index: 2147483646; width: auto;"></div><script src="./TFTP协议理解 _ 学步园_files/data.js" charset="utf-8"></script></body><iframe id="google_esf" name="google_esf" src="./TFTP协议理解 _ 学步园_files/zrt_lookup.html" data-ad-client="ca-pub-6258758148834142" style="display: none;"></iframe></html>
